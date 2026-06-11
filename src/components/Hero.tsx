@@ -1,5 +1,5 @@
 import { FadeIn } from './FadeIn'
-import { site } from '../data/site'
+import { bookingLinkProps, site } from '../data/site'
 
 export function Hero() {
   return (
@@ -20,22 +20,25 @@ export function Hero() {
           <h1 className="text-5xl font-semibold leading-tight text-grey-dark md:text-6xl lg:text-7xl">
             Relax. Restore. Renew.
           </h1>
+          <p className="mt-4 inline-flex items-center rounded-full bg-sky-light/80 px-4 py-2 text-sm font-medium text-grey-dark">
+            ★ {site.googleRating.toFixed(1)} rating · {site.googleReviewCount} Google reviews
+          </p>
           <p className="mt-6 text-lg leading-relaxed text-grey md:text-xl">
-            Premium massage &amp; skin therapy in Kirkstall — just 12 km from Port Fairy on the
-            Great Ocean Road.
+            Premium massage &amp; skin therapy in Kirkstall — 12 km from Port Fairy on the Great
+            Ocean Road.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <a
-              href={site.phoneHref}
+              {...bookingLinkProps}
               className="inline-flex min-h-[48px] items-center justify-center rounded-full bg-sky-dark px-8 py-3.5 text-sm font-semibold text-white shadow-md transition-colors hover:bg-sky"
             >
-              Call {site.phone}
+              Book Online
             </a>
             <a
-              href="#services"
+              href={site.phoneHref}
               className="inline-flex min-h-[48px] items-center justify-center rounded-full border-2 border-grey-dark/20 bg-white/80 px-8 py-3.5 text-sm font-semibold text-grey-dark backdrop-blur-sm transition-colors hover:border-sky-dark hover:text-sky-dark"
             >
-              View Services
+              Call {site.phone}
             </a>
           </div>
         </FadeIn>

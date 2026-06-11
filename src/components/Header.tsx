@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
-import { site } from '../data/site'
+import { bookingLinkProps, site } from '../data/site'
 
 const navLinks = [
   { href: '#services', label: 'Services' },
+  { href: '#reviews', label: 'Reviews' },
   { href: '#about', label: 'About' },
   { href: '#visit', label: 'Visit Us' },
 ]
@@ -49,7 +50,7 @@ export function Header() {
             </a>
           ))}
           <a
-            href={site.phoneHref}
+            {...bookingLinkProps}
             className="rounded-full bg-sky-dark px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-sky"
           >
             Book Now
@@ -89,7 +90,7 @@ export function Header() {
             ))}
             <li className="mt-3">
               <a
-                href={site.phoneHref}
+                {...bookingLinkProps}
                 className="block rounded-full bg-sky-dark px-6 py-3.5 text-center text-sm font-semibold text-white"
               >
                 Book Now

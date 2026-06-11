@@ -6,8 +6,10 @@ export function LocalBusinessSchema() {
     '@type': 'HealthAndBeautyBusiness',
     name: site.name,
     description:
-      'Premium massage and skin therapy spa in Kirkstall VIC, near Port Fairy on the Great Ocean Road. Manual lymphatic drainage, relaxation massage, Dermalogica facials, and microneedling.',
+      'Premium massage and skin therapy spa in Kirkstall VIC, near Port Fairy and Warrnambool on the Great Ocean Road. Manual lymphatic drainage, relaxation massage, Dermalogica facials, and microneedling.',
+    url: site.bookingUrl,
     telephone: '+61 474 146 501',
+    email: site.email,
     priceRange: '$$',
     address: {
       '@type': 'PostalAddress',
@@ -33,6 +35,13 @@ export function LocalBusinessSchema() {
         closes: '20:00',
       },
     ],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: site.googleRating,
+      reviewCount: site.googleReviewCount,
+      bestRating: 5,
+      worstRating: 1,
+    },
     geo: {
       '@type': 'GeoCoordinates',
       latitude: -38.289,

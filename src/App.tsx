@@ -3,6 +3,8 @@ import { Footer } from './components/Footer'
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
 import { LocalBusinessSchema } from './components/LocalBusinessSchema'
+import { MoreServices } from './components/MoreServices'
+import { Reviews } from './components/Reviews'
 import { Services } from './components/Services'
 import { VisitUs } from './components/VisitUs'
 
@@ -14,6 +16,8 @@ function App() {
       <main>
         <Hero />
         <Services />
+        <MoreServices />
+        <Reviews />
         <About />
         <VisitUs />
       </main>

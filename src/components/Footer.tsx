@@ -9,7 +9,16 @@ export function Footer() {
         <p className="text-sm text-grey">
           © {year} {site.name}. All rights reserved.
         </p>
-        <p className="mt-2 text-xs text-grey-muted">Website by Chapter99</p>
+        <p className="mt-2 text-xs text-grey-muted">
+          <a
+            href={site.chapter99Url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors hover:text-sky-dark"
+          >
+            Website by Chapter99
+          </a>
+        </p>
       </div>
     </footer>
   )
