@@ -35,7 +35,7 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 md:px-8">
         <a
           href="#home"
-          className="font-heading text-xl font-semibold tracking-tight text-grey-dark md:text-2xl"
+          className="font-heading text-[1.6rem] font-semibold tracking-tight text-grey-dark md:text-[2rem]"
         >
           {site.name}
         </a>
