@@ -1,57 +1,8 @@
-import { useEffect, useRef, useState } from 'react'
 import { bookingLinkProps, expressTreatments } from '../data/site'
-import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion'
 import { ExpressServiceCard } from './ExpressServiceCard'
 import { FadeIn } from './FadeIn'
 
-function triggerReveal(setSectionVisible: (value: boolean) => void) {
-  requestAnimationFrame(() => {
-    requestAnimationFrame(() => {
-      setSectionVisible(true)
-    })
-  })
-}
-
 export function ExpressServices() {
-  const gridRef = useRef<HTMLDivElement>(null)
-  const [sectionVisible, setSectionVisible] = useState(false)
-  const reducedMotion = usePrefersReducedMotion()
-
-  useEffect(() => {
-    if (reducedMotion) {
-      setSectionVisible(true)
-      return
-    }
-
-    const grid = gridRef.current
-    if (!grid) return
-
-    const startReveal = () => {
-      triggerReveal(setSectionVisible)
-    }
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          startReveal()
-          observer.disconnect()
-        }
-      },
-      { threshold: 0.15, rootMargin: '0px 0px -5% 0px' },
-    )
-
-    observer.observe(grid)
-
-    const rect = grid.getBoundingClientRect()
-    const isAlreadyVisible = rect.top < window.innerHeight * 0.9 && rect.bottom > 0
-    if (isAlreadyVisible) {
-      startReveal()
-      observer.disconnect()
-    }
-
-    return () => observer.disconnect()
-  }, [reducedMotion])
-
   return (
     <section id="express" className="bg-white py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
@@ -64,15 +15,9 @@ export function ExpressServices() {
           </p>
         </FadeIn>
 
-        <div ref={gridRef} className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2">
           {expressTreatments.map((treatment, index) => (
-            <ExpressServiceCard
-              key={treatment.name}
-              treatment={treatment}
-              index={index}
-              sectionVisible={sectionVisible}
-              reducedMotion={reducedMotion}
-            />
+            <ExpressServiceCard key={treatment.name} treatment={treatment} index={index} />
           ))}
         </div>
 
