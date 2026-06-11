@@ -74,4 +74,37 @@
     opacity: 1 !important;
     transform: none !important;
   }
+
+  .live-pulse-dot {
+    animation: none !important;
+  }
+}
+
+@keyframes livePulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.4;
+    transform: scale(1.5);
+  }
+}
+
+.live-pulse-dot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25);
+  animation: livePulse 1.8s ease-in-out infinite;
+}
+
+.open-now-text {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #22c55e;
 }

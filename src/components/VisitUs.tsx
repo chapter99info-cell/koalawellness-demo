@@ -1,4 +1,5 @@
 import { FadeIn } from './FadeIn'
+import { MapDistanceBadge } from './MapDistanceBadge'
 import { VisitContactButtons } from './VisitContactButtons'
 import { bookingLinkProps, externalLinkProps, site } from '../data/site'
 
@@ -86,7 +87,7 @@ export function VisitUs() {
           </FadeIn>
 
           <FadeIn delay={160}>
-            <div className="overflow-hidden rounded-2xl shadow-sm">
+            <div className="relative overflow-hidden rounded-2xl shadow-sm">
               <iframe
                 title="Koala Wellness & Spa location map"
                 src={site.mapEmbedUrl}
@@ -98,6 +99,7 @@ export function VisitUs() {
                 referrerPolicy="no-referrer-when-downgrade"
                 className="w-full"
               />
+              <MapDistanceBadge />
             </div>
           </FadeIn>
         </div>
