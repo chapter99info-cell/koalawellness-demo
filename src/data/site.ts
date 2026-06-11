@@ -41,13 +41,13 @@ export const signatureTreatments = [
     name: 'Relaxation Massage',
     duration: '60 min',
     price: '$120',
-    image: 'https://images.unsplash.com/photo-1544161515-4ab6ce5e8b29?w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=400&q=80',
   },
   {
     name: 'Thai Combination & Deep Tissue Massage',
     duration: '60 min',
     price: '$130',
-    image: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1554057009-4e4d9e4c9e9c?w=400&q=80',
   },
   {
     name: 'Facial Treatment with Dermalogica',
