@@ -1,5 +1,4 @@
 import { FadeIn } from './FadeIn'
-import { paymentMethods } from '../data/site'
 
 const aboutImageUrl =
   'https://euiwkvozrhnbxttfuchh.supabase.co/storage/v1/object/public/koalawellness-demo/Photos/koala05.png'
@@ -47,22 +46,6 @@ export function About() {
                   &ldquo;Your health is our priority — our mission.&rdquo;
                 </p>
               </div>
-            </div>
-
-            <div className="mt-8 border-t border-sky-light pt-8">
-              <p className="text-sm font-semibold uppercase tracking-wide text-grey-muted">
-                Payment options accepted
-              </p>
-              <ul className="mt-3 flex flex-wrap gap-3">
-                {paymentMethods.map((method) => (
-                  <li
-                    key={method}
-                    className="rounded-full bg-white px-4 py-2 text-sm font-medium text-grey-dark shadow-sm"
-                  >
-                    {method}
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
         </FadeIn>

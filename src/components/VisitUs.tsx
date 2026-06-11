@@ -1,5 +1,4 @@
 import { FadeIn } from './FadeIn'
-import { PaymentBadges } from './PaymentBadges'
 import { VisitContactButtons } from './VisitContactButtons'
 import { bookingLinkProps, externalLinkProps, site } from '../data/site'
 
@@ -83,8 +82,6 @@ export function VisitUs() {
               </a>
 
               <VisitContactButtons className="mt-4" />
-
-              <PaymentBadges className="mt-8 border-t border-grey-light pt-8" />
             </div>
           </FadeIn>
 
