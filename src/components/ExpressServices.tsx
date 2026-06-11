@@ -4,6 +4,14 @@ import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion'
 import { ExpressServiceCard } from './ExpressServiceCard'
 import { FadeIn } from './FadeIn'
 
+function triggerReveal(setSectionVisible: (value: boolean) => void) {
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      setSectionVisible(true)
+    })
+  })
+}
+
 export function ExpressServices() {
   const gridRef = useRef<HTMLDivElement>(null)
   const [sectionVisible, setSectionVisible] = useState(false)
@@ -18,17 +26,29 @@ export function ExpressServices() {
     const grid = gridRef.current
     if (!grid) return
 
+    const startReveal = () => {
+      triggerReveal(setSectionVisible)
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setSectionVisible(true)
-          observer.unobserve(grid)
+          startReveal()
+          observer.disconnect()
         }
       },
-      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' },
+      { threshold: 0.15, rootMargin: '0px 0px -5% 0px' },
     )
 
     observer.observe(grid)
+
+    const rect = grid.getBoundingClientRect()
+    const isAlreadyVisible = rect.top < window.innerHeight * 0.9 && rect.bottom > 0
+    if (isAlreadyVisible) {
+      startReveal()
+      observer.disconnect()
+    }
+
     return () => observer.disconnect()
   }, [reducedMotion])
 
