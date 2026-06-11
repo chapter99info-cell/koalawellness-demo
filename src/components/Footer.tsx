@@ -10,10 +10,10 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-5 text-center md:px-8">
         <ContactButtons className="mb-8 justify-center" />
         <PaymentBadges className="mb-8" centered />
-        <p className="text-sm text-grey">
+        <p className="text-base text-grey">
           © {year} {site.name}. All rights reserved.
         </p>
-        <p className="mt-2 text-xs text-grey-muted">
+        <p className="mt-2 text-base text-grey-muted">
           <a
             href={site.chapter99Url}
             target="_blank"

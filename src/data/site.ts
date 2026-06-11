@@ -35,31 +35,37 @@ export const signatureTreatments = [
     name: 'Manual Lymphatic Drainage (Castor Oil Detox Ritual)',
     duration: '90 min',
     price: '$150',
+    image: 'https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=400&q=80',
   },
   {
     name: 'Relaxation Massage',
     duration: '60 min',
     price: '$120',
+    image: 'https://images.unsplash.com/photo-1544161515-4ab6ce5e8b29?w=400&q=80',
   },
   {
     name: 'Thai Combination & Deep Tissue Massage',
     duration: '60 min',
     price: '$130',
+    image: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=400&q=80',
   },
   {
     name: 'Facial Treatment with Dermalogica',
     duration: '60 min',
     price: '$150',
+    image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400&q=80',
   },
   {
     name: 'Body Scrub & Wrap',
     duration: '60 min',
     price: '$150',
+    image: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=400&q=80',
   },
   {
     name: 'Microneedling',
     duration: 'Per session',
     price: '$250',
+    image: 'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=400&q=80',
   },
 ] as const
 

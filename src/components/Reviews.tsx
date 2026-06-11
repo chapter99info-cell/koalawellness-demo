@@ -21,8 +21,8 @@ export function Reviews() {
                 <p className="mb-1 text-sky-dark" aria-label="5 out of 5 stars">
                   ★★★★★
                 </p>
-                <p className="flex-1 leading-relaxed text-grey">&ldquo;{review.text}&rdquo;</p>
-                <footer className="mt-6 text-sm font-semibold text-grey-dark">— {review.name}</footer>
+                <p className="flex-1 text-lg leading-relaxed text-grey">&ldquo;{review.text}&rdquo;</p>
+                <footer className="mt-6 text-lg font-semibold text-grey-dark">— {review.name}</footer>
               </blockquote>
             </FadeIn>
           ))}

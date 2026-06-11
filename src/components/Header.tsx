@@ -45,14 +45,14 @@ export function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-grey transition-colors hover:text-sky-dark"
+              className="text-lg font-medium text-grey transition-colors hover:text-sky-dark"
             >
               {link.label}
             </a>
           ))}
           <a
             {...bookingLinkProps}
-            className="rounded-full bg-sky-dark px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-sky"
+            className="rounded-full bg-sky-dark px-6 py-2.5 text-lg font-semibold text-white shadow-sm transition-colors hover:bg-sky"
           >
             Book Now
           </a>
@@ -83,7 +83,7 @@ export function Header() {
                 <a
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
-                  className="block rounded-lg px-3 py-3 text-base font-medium text-grey-dark"
+                  className="block rounded-lg px-3 py-3 text-lg font-medium text-grey-dark"
                 >
                   {link.label}
                 </a>
@@ -92,7 +92,7 @@ export function Header() {
             <li className="mt-3">
               <a
                 {...bookingLinkProps}
-                className="block rounded-full bg-sky-dark px-6 py-3.5 text-center text-sm font-semibold text-white"
+                className="block rounded-full bg-sky-dark px-6 py-3.5 text-center text-lg font-semibold text-white"
               >
                 Book Now
               </a>

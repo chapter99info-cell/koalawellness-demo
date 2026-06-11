@@ -1,6 +1,6 @@
-import { ContactButtons } from './ContactButtons'
 import { FadeIn } from './FadeIn'
 import { PaymentBadges } from './PaymentBadges'
+import { VisitContactButtons } from './VisitContactButtons'
 import { bookingLinkProps, externalLinkProps, site } from '../data/site'
 
 export function VisitUs() {
@@ -25,13 +25,13 @@ export function VisitUs() {
                   <dt className="text-sm font-semibold uppercase tracking-wide text-grey-muted">
                     Address
                   </dt>
-                  <dd className="mt-1 text-base text-grey-dark">{site.address}</dd>
+                  <dd className="mt-1 text-lg text-grey-dark">{site.address}</dd>
                 </div>
                 <div>
                   <dt className="text-sm font-semibold uppercase tracking-wide text-grey-muted">
                     Opening Hours
                   </dt>
-                  <dd className="mt-1 text-base text-grey-dark">{site.hours}</dd>
+                  <dd className="mt-1 text-lg text-grey-dark">{site.hours}</dd>
                 </div>
                 <div>
                   <dt className="text-sm font-semibold uppercase tracking-wide text-grey-muted">
@@ -53,7 +53,7 @@ export function VisitUs() {
                   <dd className="mt-1">
                     <a
                       href={`mailto:${site.email}`}
-                      className="inline-flex min-h-[44px] items-center text-base font-medium text-sky-dark transition-colors hover:text-sky"
+                      className="inline-flex min-h-[44px] items-center text-lg font-medium text-sky-dark transition-colors hover:text-sky"
                     >
                       {site.email}
                     </a>
@@ -67,7 +67,7 @@ export function VisitUs() {
                     <a
                       href={site.instagramUrl}
                       {...externalLinkProps}
-                      className="inline-flex min-h-[44px] items-center text-base font-medium text-sky-dark transition-colors hover:text-sky"
+                      className="inline-flex min-h-[44px] items-center text-lg font-medium text-sky-dark transition-colors hover:text-sky"
                     >
                       @koala_wellnessspa
                     </a>
@@ -75,14 +75,14 @@ export function VisitUs() {
                 </div>
               </dl>
 
-              <ContactButtons className="mt-8" />
-
               <a
                 {...bookingLinkProps}
-                className="mt-4 inline-flex min-h-[48px] w-full items-center justify-center rounded-full bg-sky-dark px-8 py-3.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-sky sm:w-auto"
+                className="mt-8 inline-flex min-h-[48px] w-full items-center justify-center rounded-full bg-sky-dark px-8 py-3.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-sky sm:w-auto"
               >
                 Book Now
               </a>
+
+              <VisitContactButtons className="mt-4" />
 
               <PaymentBadges className="mt-8 border-t border-grey-light pt-8" />
             </div>
