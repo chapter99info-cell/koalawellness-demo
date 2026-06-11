@@ -1,0 +1,23 @@
+{
+  "name": "Koala Wellness & Spa",
+  "short_name": "KoalaSpa",
+  "description": "Premium massage and skin therapy in Kirkstall VIC",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#7eb3d4",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
