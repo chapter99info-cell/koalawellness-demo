@@ -20,9 +20,9 @@ function App() {
         <Hero />
         <Services />
         <ExpressServices />
-        <MoreServices />
         <About />
         <Reviews />
+        <MoreServices />
         <VisitUs />
       </main>
       <Footer />
