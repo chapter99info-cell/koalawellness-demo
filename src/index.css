@@ -68,30 +68,10 @@
   }
 }
 
-.express-card {
-  opacity: 0;
-  transform: translateY(28px);
-  animation: expressReveal 0.6s ease forwards;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-  will-change: transform;
-}
-
-.express-card:hover {
-  transform: perspective(900px) rotateX(4deg) rotateY(-4deg) translateY(-4px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .express-card {
-    animation: none;
-    opacity: 1;
-    transform: none;
-  }
-
-  .express-card:hover {
-    transform: none;
-    box-shadow: none;
+  [style*='expressReveal'] {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
 }

@@ -4,15 +4,11 @@ type ExpressTreatment = (typeof expressTreatments)[number]
 
 type ExpressServiceCardProps = {
   treatment: ExpressTreatment
-  index: number
 }
 
-export function ExpressServiceCard({ treatment, index }: ExpressServiceCardProps) {
+export function ExpressServiceCard({ treatment }: ExpressServiceCardProps) {
   return (
-    <article
-      className="express-card flex h-full flex-col justify-between rounded-2xl border border-sky-light bg-sky-light/20 p-7 shadow-sm md:p-8"
-      style={{ animationDelay: `${index * 0.12}s` }}
-    >
+    <article className="flex h-full flex-col justify-between rounded-2xl border border-sky-light bg-sky-light/20 p-7 shadow-sm md:p-8">
       <div>
         <h3 className="text-xl font-semibold text-grey-dark">{treatment.name}</h3>
         <p className="mt-2 text-lg text-grey-muted">{treatment.duration}</p>

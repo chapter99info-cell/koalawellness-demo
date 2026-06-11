@@ -17,7 +17,29 @@ export function ExpressServices() {
 
         <div className="grid gap-6 md:grid-cols-2">
           {expressTreatments.map((treatment, index) => (
-            <ExpressServiceCard key={treatment.name} treatment={treatment} index={index} />
+            <div
+              key={treatment.name}
+              style={{
+                opacity: 0,
+                transform: 'translateY(28px)',
+                animation: 'expressReveal 0.6s ease forwards',
+                animationDelay: `${index * 0.12}s`,
+              }}
+              onMouseEnter={(e) => {
+                const target = e.currentTarget as HTMLDivElement
+                target.style.transform =
+                  'perspective(900px) rotateX(3deg) rotateY(-3deg) translateY(-4px)'
+                target.style.boxShadow = '0 16px 40px rgba(0,0,0,0.12)'
+                target.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease'
+              }}
+              onMouseLeave={(e) => {
+                const target = e.currentTarget as HTMLDivElement
+                target.style.transform = 'translateY(0)'
+                target.style.boxShadow = ''
+              }}
+            >
+              <ExpressServiceCard treatment={treatment} />
+            </div>
           ))}
         </div>
 
