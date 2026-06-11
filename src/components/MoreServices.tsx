@@ -1,4 +1,5 @@
 import { FadeIn } from './FadeIn'
+import { MoreServicesSlideshow } from './MoreServicesSlideshow'
 import { bookingLinkProps, moreServices } from '../data/site'
 
 export function MoreServices() {
@@ -17,7 +18,10 @@ export function MoreServices() {
         </FadeIn>
 
         <FadeIn delay={80}>
-          <div className="mx-auto max-w-3xl rounded-2xl border border-sky-light bg-sky-light/20 p-8 shadow-sm md:p-10">
+          <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-2 lg:items-center">
+            <MoreServicesSlideshow />
+
+            <div className="rounded-2xl border border-sky-light bg-sky-light/20 p-8 shadow-sm md:p-10">
             <div className="grid gap-4 sm:grid-cols-2">
               <ul className="space-y-3">
                 {leftColumn.map((item) => (
@@ -44,6 +48,7 @@ export function MoreServices() {
               >
                 See full menu &amp; prices →
               </a>
+            </div>
             </div>
           </div>
         </FadeIn>
