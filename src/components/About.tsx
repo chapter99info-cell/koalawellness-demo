@@ -21,29 +21,37 @@ export function About() {
 
               <div>
                 <h2 className="text-4xl font-semibold text-grey-dark md:text-5xl">
-                  Meet Than — Your Dedicated Therapist
+                  Welcome to Your Ultra-Private Sanctuary
                 </h2>
 
                 <div className="mt-6 space-y-5 text-lg leading-relaxed text-grey">
                   <p>
-                    Finding a space to truly unwind can be difficult in a busy world. I&apos;m Than,
-                    a fully qualified massage therapist, and my goal is to offer you an experience
-                    that goes beyond a standard spa visit.
+                    Step away from the noise of the outside world and step into an exclusive wellness
+                    retreat designed entirely around you. Koala Wellness &amp; Spa isn&apos;t just a
+                    clinic—it is your ultimate private sanctuary, hidden away in the peaceful
+                    Kirkstall countryside.
                   </p>
                   <p>
-                    I have purposefully designed my Kirkstall studio to be an ultra-private haven. By
-                    taking only dedicated, individual bookings, I ensure that you receive 100% of my
-                    focus in a deeply calming, soundproofed environment. There is no waiting in line
-                    and no background chatter — just you, premium treatments tailored to your needs,
-                    and absolute tranquility.
+                    Here, your healing journey unfolds in complete, undisturbed serenity. We operate on
+                    a strict, one-to-one appointment basis. That means no crowded waiting rooms, no
+                    overlapping clients, and absolutely no interruptions. When you are here, this
+                    tranquil space is yours, and yours alone.
                   </p>
                   <p>
-                    From the moment you arrive, my focus is entirely on your well-being.
+                    Qualified therapist Than curates every single session to your exact needs. From
+                    Manual Lymphatic Drainage and deep tissue massage to advanced facial treatments
+                    using premium Dermalogica products, every detail is crafted to deliver a highly
+                    personalized, luxury experience.
+                  </p>
+                  <p>
+                    Whether you are seeking deep relaxation, targeted muscle relief, or advanced skin
+                    rejuvenation, we invite you to unwind, restore, and experience wellness without
+                    compromise.
                   </p>
                 </div>
 
                 <p className="mt-8 text-lg italic text-grey">
-                  &ldquo;Your health is our priority — our mission.&rdquo;
+                  Your health is our priority — our mission.
                 </p>
               </div>
             </div>
