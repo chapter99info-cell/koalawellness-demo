@@ -1,6 +1,7 @@
 type PaymentBadgeProps = {
   className?: string
   centered?: boolean
+  variant?: 'default' | 'footer'
 }
 
 function VisaIcon() {
@@ -67,13 +68,19 @@ const paymentBadges = [
   { id: 'square', label: 'Square', icon: SquareIcon },
 ] as const
 
-export function PaymentBadges({ className = '', centered = false }: PaymentBadgeProps) {
+export function PaymentBadges({
+  className = '',
+  centered = false,
+  variant = 'default',
+}: PaymentBadgeProps) {
+  const isFooter = variant === 'footer'
+
   return (
     <div className={className}>
       <p
-        className={`text-sm font-semibold uppercase tracking-wide text-grey-muted ${
-          centered ? 'text-center' : ''
-        }`}
+        className={`text-sm font-semibold uppercase tracking-wide ${
+          isFooter ? 'text-white' : 'text-grey-muted'
+        } ${centered ? 'text-center' : ''}`}
       >
         We accept
       </p>
@@ -84,7 +91,11 @@ export function PaymentBadges({ className = '', centered = false }: PaymentBadge
         {paymentBadges.map(({ id, label, icon: Icon }) => (
           <li key={id}>
             <span
-              className="inline-flex items-center rounded-md border border-grey-light bg-white px-2 py-1.5 shadow-sm"
+              className={
+                isFooter
+                  ? 'inline-flex items-center rounded-full bg-white px-3 py-2 shadow-sm'
+                  : 'inline-flex items-center rounded-md border border-grey-light bg-white px-2 py-1.5 shadow-sm'
+              }
               title={label}
               aria-label={label}
             >
