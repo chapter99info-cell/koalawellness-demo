@@ -42,7 +42,7 @@ export function MapDistanceBadge() {
   }, [])
 
   return (
-    <div className="pointer-events-none absolute bottom-4 left-4 z-10 max-w-[min(100%-2rem,260px)] rounded-xl bg-white/95 p-4 shadow-lg backdrop-blur-sm">
+    <div className="pointer-events-none absolute top-4 left-4 z-10 max-w-[min(100%-2rem,260px)] rounded-xl bg-white/95 p-4 shadow-lg backdrop-blur-sm">
       <div className="open-now-indicator mb-2 flex items-center gap-1.5">
         <span className="live-pulse-dot" aria-hidden="true" />
         <span className="open-now-text">Open Now</span>

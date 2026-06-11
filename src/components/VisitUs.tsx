@@ -1,7 +1,9 @@
 import { FadeIn } from './FadeIn'
 import { MapDistanceBadge } from './MapDistanceBadge'
-import { VisitContactButtons } from './VisitContactButtons'
 import { bookingLinkProps, externalLinkProps, site } from '../data/site'
+
+const directionsUrl =
+  'https://www.google.com/maps/dir/?api=1&destination=479+Toolong+North+Road+Kirkstall+VIC+3283'
 
 export function VisitUs() {
   return (
@@ -15,94 +17,81 @@ export function VisitUs() {
           </p>
         </FadeIn>
 
-        <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
-          <FadeIn delay={80}>
-            <div className="rounded-2xl bg-white p-7 shadow-sm md:p-8">
-              <h3 className="text-2xl font-semibold text-grey-dark">Location &amp; Contact</h3>
+        <FadeIn delay={80}>
+          <div className="overflow-hidden rounded-3xl shadow-lg lg:flex">
+            <div className="flex flex-col justify-center bg-[#1a3a4a] p-8 md:p-10 lg:w-[45%] lg:p-12">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky/80">
+                FIND US
+              </p>
+              <h3 className="mt-3 font-heading text-[2rem] font-semibold leading-tight text-white">
+                Visit Our Sanctuary
+              </h3>
+              <div className="mt-5 h-px w-10 bg-sky" aria-hidden />
 
-              <dl className="mt-6 space-y-5">
+              <div className="mt-8 space-y-6 text-white">
                 <div>
-                  <dt className="text-sm font-semibold uppercase tracking-wide text-grey-muted">
-                    Address
-                  </dt>
-                  <dd className="mt-1 text-lg text-grey-dark">{site.address}</dd>
+                  <p className="text-base leading-relaxed">
+                    <span className="mr-2" aria-hidden>
+                      📍
+                    </span>
+                    479 Toolong North Road
+                  </p>
+                  <p className="ml-7 text-base leading-relaxed text-white/90">Kirkstall VIC 3283</p>
                 </div>
-                <div>
-                  <dt className="text-sm font-semibold uppercase tracking-wide text-grey-muted">
-                    Opening Hours
-                  </dt>
-                  <dd className="mt-1 text-lg text-grey-dark">{site.hours}</dd>
-                </div>
-                <div>
-                  <dt className="text-sm font-semibold uppercase tracking-wide text-grey-muted">
-                    Phone
-                  </dt>
-                  <dd className="mt-1">
-                    <a
-                      href={site.phoneHref}
-                      className="inline-flex min-h-[44px] items-center text-lg font-semibold text-sky-dark transition-colors hover:text-sky"
-                    >
-                      {site.phone}
-                    </a>
-                  </dd>
-                </div>
-                <div>
-                  <dt className="text-sm font-semibold uppercase tracking-wide text-grey-muted">
-                    Email
-                  </dt>
-                  <dd className="mt-1">
-                    <a
-                      href={`mailto:${site.email}`}
-                      className="inline-flex min-h-[44px] items-center text-lg font-medium text-sky-dark transition-colors hover:text-sky"
-                    >
-                      {site.email}
-                    </a>
-                  </dd>
-                </div>
-                <div>
-                  <dt className="text-sm font-semibold uppercase tracking-wide text-grey-muted">
-                    Instagram
-                  </dt>
-                  <dd className="mt-1">
-                    <a
-                      href={site.instagramUrl}
-                      {...externalLinkProps}
-                      className="inline-flex min-h-[44px] items-center text-lg font-medium text-sky-dark transition-colors hover:text-sky"
-                    >
-                      @koala_wellnessspa
-                    </a>
-                  </dd>
-                </div>
-              </dl>
 
-              <a
-                {...bookingLinkProps}
-                className="mt-8 inline-flex min-h-[48px] w-full items-center justify-center rounded-full bg-sky-dark px-8 py-3.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-sky sm:w-auto"
-              >
-                Book Now
-              </a>
+                <div>
+                  <p className="text-base leading-relaxed">
+                    <span className="mr-2" aria-hidden>
+                      🕐
+                    </span>
+                    Open Every Day
+                  </p>
+                  <p className="ml-7 text-base leading-relaxed text-white/90">9:00 AM – 8:00 PM</p>
+                </div>
 
-              <VisitContactButtons className="mt-4" />
+                <p className="text-sm text-white/60">
+                  12 km from Port Fairy · 35 km from Warrnambool
+                </p>
+
+                <div className="open-now-indicator flex items-center gap-1.5">
+                  <span className="live-pulse-dot" aria-hidden="true" />
+                  <span className="open-now-text">Open Now</span>
+                </div>
+              </div>
+
+              <div className="mt-8 flex flex-col gap-3">
+                <a
+                  {...bookingLinkProps}
+                  className="inline-flex min-h-[48px] w-full items-center justify-center rounded-full bg-sky-dark px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-sky"
+                >
+                  Book Now
+                </a>
+                <a
+                  href={directionsUrl}
+                  {...externalLinkProps}
+                  className="inline-flex min-h-[48px] w-full items-center justify-center rounded-full border-2 border-white bg-transparent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+                >
+                  Get Directions
+                </a>
+              </div>
             </div>
-          </FadeIn>
 
-          <FadeIn delay={160}>
-            <div className="relative overflow-hidden rounded-2xl shadow-sm">
+            <div className="relative min-h-[420px] lg:w-[55%]">
               <iframe
                 title="Koala Wellness & Spa location map"
                 src={site.mapEmbedUrl}
                 width="100%"
-                height="400"
+                height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="w-full"
+                className="absolute inset-0 h-full w-full"
               />
               <MapDistanceBadge />
             </div>
-          </FadeIn>
-        </div>
+          </div>
+        </FadeIn>
       </div>
     </section>
   )
