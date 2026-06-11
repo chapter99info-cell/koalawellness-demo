@@ -4,8 +4,8 @@ import { bookingLinkProps, site } from '../data/site'
 const navLinks = [
   { href: '#services', label: 'Services' },
   { href: '#express', label: 'Express' },
-  { href: '#reviews', label: 'Reviews' },
   { href: '#about', label: 'About' },
+  { href: '#reviews', label: 'Reviews' },
   { href: '#visit', label: 'Visit Us' },
 ]
 

@@ -21,8 +21,8 @@ function App() {
         <Services />
         <ExpressServices />
         <MoreServices />
-        <Reviews />
         <About />
+        <Reviews />
         <VisitUs />
       </main>
       <Footer />
