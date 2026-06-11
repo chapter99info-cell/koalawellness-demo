@@ -69,12 +69,40 @@ export const signatureTreatments = [
   },
 ] as const
 
+const supabaseMediaBase =
+  'https://euiwkvozrhnbxttfuchh.supabase.co/storage/v1/object/public/koalawellness-demo'
+
 export const expressTreatments = [
-  { name: 'Neck & Shoulder Release', duration: '30 min', price: '$50' },
-  { name: 'Lower Back Relief', duration: '30 min', price: '$50' },
-  { name: 'Foot Refresh Massage', duration: '30 min', price: '$50' },
-  { name: 'Face & Head Massage', duration: '30 min', price: '$50' },
-  { name: 'Lymphatic Quick Detox', duration: '30 min', price: '$70' },
+  {
+    name: 'Neck & Shoulder Release',
+    duration: '30 min',
+    price: '$50',
+    media: { type: 'image', src: `${supabaseMediaBase}/Photos/Koala023320.jpg` },
+  },
+  {
+    name: 'Lower Back Relief',
+    duration: '30 min',
+    price: '$50',
+    media: { type: 'video', src: `${supabaseMediaBase}/VDO/koala_cover.mp4` },
+  },
+  {
+    name: 'Foot Refresh Massage',
+    duration: '30 min',
+    price: '$50',
+    media: { type: 'image', src: `${supabaseMediaBase}/Photos/Koala022020.jpg` },
+  },
+  {
+    name: 'Face & Head Massage',
+    duration: '30 min',
+    price: '$50',
+    media: { type: 'video', src: `${supabaseMediaBase}/VDO/001cover%20(1).mp4` },
+  },
+  {
+    name: 'Lymphatic Quick Detox',
+    duration: '30 min',
+    price: '$70',
+    media: { type: 'image', src: `${supabaseMediaBase}/Photos/Koala00420.jpg` },
+  },
 ] as const
 
 export const moreServices = [
