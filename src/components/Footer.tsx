@@ -1,4 +1,5 @@
 import { ContactButtons } from './ContactButtons'
+import { PaymentBadges } from './PaymentBadges'
 import { site } from '../data/site'
 
 export function Footer() {
@@ -8,6 +9,7 @@ export function Footer() {
     <footer className="border-t border-grey-light bg-white py-10">
       <div className="mx-auto max-w-6xl px-5 text-center md:px-8">
         <ContactButtons className="mb-8 justify-center" />
+        <PaymentBadges className="mb-8" centered />
         <p className="text-sm text-grey">
           © {year} {site.name}. All rights reserved.
         </p>

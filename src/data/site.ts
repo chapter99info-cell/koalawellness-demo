@@ -97,7 +97,7 @@ export const reviews = [
   },
 ] as const
 
-export const paymentMethods = ['Visa', 'Mastercard', 'Apple Pay', 'Google Pay'] as const
+export const paymentMethods = ['Visa', 'Mastercard', 'Apple Pay', 'Google Pay', 'Square'] as const
 
 export const faqItems = [
   {
